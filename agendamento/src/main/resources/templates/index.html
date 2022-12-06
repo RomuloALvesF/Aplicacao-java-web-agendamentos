@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html xmlns:th="http://thymeleaf.org"
+      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout">
+<head>
+    <title>ProdutosApp</title>
+    <!--Import Google Icon Font-->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"/>
+    <!--Import materialize.css-->
+    <link type="text/css" rel="stylesheet" href="materialize/css/materialize.min.css" media="screen,projection"/>
+    <!--Let browser know website is optimized for mobile-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+</head>
+<body>
+
+<h1>Lista de Agendados</h1>
+<h3><a href="/cadastroAluno" class="waves-effect waves-light btn"><i class="material-icons left">add_circle_outline</i>Cadastrar Alunos</a></h3>
+<table class="container">
+    <thead>
+    <tr>
+        <th>Nome</th>
+        <th>Matrícula</th>
+        <th>Data</th>
+        <th>Horário</th>
+        <th>Deletar</th>
+    </tr>
+
+    </thead>
+
+    <tbody>
+
+    <tr th:each="agendamento_model : ${agendados}">
+        <td><span th:text="${agendamento_model.nome}"></span></td>
+        <td><span th:text="${agendamento_model.matricula}"></span></td>
+        <td><span th:text="${agendamento_model.data}"></span></td>
+        <td><span th:text="${agendamento_model.horario}"></span></td>
+        <td><a class="waves-effect waves-light btn-small" th:href="${(#mvc.url('AC#deletar').arg(0, agendamento_model.id)).build()}"><i class="material-icons left">delete_forever</i></a></td>
+    </tr>
+
+    </tbody>
+
+</table>
+
+<script type="text/javascript" src="materialize/js/materialize.min.js"></script>
+</body>
+</html>
