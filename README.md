@@ -15,7 +15,8 @@
 <table>
 <li>Cadastrar aluno(a) e horário.
 <li>Ver lista de cadastro.
+<li>Remoção de cadastros.
 
 <h4>Funcionalidades que serão implementadas: <h4/>
-<li>Alteração e remoção de cadastros.
+<li>Melhorias no layout.
 <table/>
