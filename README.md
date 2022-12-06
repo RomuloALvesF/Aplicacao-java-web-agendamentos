@@ -13,7 +13,7 @@
 
 <h4>Funcionalidades ativas: <h4/>
 <table>
-<li>Cadastrar aluno(a) e horário.
+<li>Cadastrar aluno(a), horário e data.
 <li>Ver lista de cadastro.
 <li>Remoção de cadastros.
 
